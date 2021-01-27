@@ -1,5 +1,6 @@
 token = "your token here"
 spam_text = "Hello"
+channel_id = 804004562993676313
 
 import discord
 import asyncio
@@ -13,7 +14,7 @@ async def on_ready():
     i = 0
     while i <= 1:
         print(spam_text)
-        channel = client.get_channel(804004562993676313)
+        channel = client.get_channel(channel_id)
         await channel.send(spam_text)
         await asyncio.sleep(1)
 
